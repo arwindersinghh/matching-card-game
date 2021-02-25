@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title> Matching Game </title>
+    </head>
+    <body>
+        <h1 class="page-title"> Matching Game </h1>
+        <div class="overlay-text visible">
+            Click to Start
+        </div>
+        <div id="game-over-text" class="overlay-text">
+            Game Over
+            <span class="overlay-text-small">Click to play again</span>
+        </div>
+        <div id="victory-text" class="overlay-text">
+            Victory !!!
+            <span class="overlay-text-small">Click to play again</span>
+        </div>
+        <div class="game-container">
+            <div class="game-info-container">
+                <div class="game-info">
+                    Time <span id="time-remaining">100</span>
+                </div>
+                <div class="game-info">
+                    Flips <span id="flips">0</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/patrick.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/patrick.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/gary.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/gary.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/mr-krabs.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/mr-krabs.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/mrs-puff.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/mrs-puff.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/plankton.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/plankton.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/sandy-cheeks.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/sandy-cheeks.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/spongebob.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/spongebob.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/squidward.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="my-leg-guy" src="Assets/Images/my-leg-guy-back.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="card-value" src="Assets/Images/squidward.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
