@@ -151,6 +151,18 @@ body {
     height: 150px;
 }
 
+button {
+    background-color: #ff808b;
+    font-size : 35px;
+    border-radius : 12px;
+    border : 4px solid #008000;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color : #008000;
+    color: #ff808b;
+  }
+
 .card-back:hover .my-leg-guy {
     transform: translateY(0);
 } 

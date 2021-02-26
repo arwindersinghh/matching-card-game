@@ -7,7 +7,7 @@ class AudioController {
         this.gameOverSound = new Audio('Assets/Audio/gameover-dolphin.mp3');
         this.bgMusic.volume = 0.3;
         this.flipSound.volume = 0.2;
-        this.victorySound.volume = 0.8;
+        this.victorySound.volume = 0.6;
         this.matchSound.volume = 0.8;
         this.bgMusic.loop = true;
     }
@@ -57,6 +57,7 @@ class MatchingGame {
             this.countdown = this.startCountdown();
             this.busy = false;
         }, 500);
+
         this.hideCards();
         this.timer.innerText = this.timeRemaining; 
         this.ticker.innerText = this.totalClicks;
@@ -133,12 +134,44 @@ class MatchingGame {
 
     gameOver() {
         clearInterval(this.countdown);
+        let difficultyEasy = document.getElementById('easy2');
+    difficultyEasy.addEventListener('click', () => {
+        this.totalTime = 120;
+    })
+    let difficultyMedium = document.getElementById('medium2');
+    difficultyMedium.addEventListener('click', () => {
+        this.totalTime = 80;
+    })
+    let difficultyHard = document.getElementById('hard2');
+    difficultyHard.addEventListener('click', () => {
+        this.totalTime = 40;
+    })
+    let difficultyImpossible = document.getElementById('Impossible2');
+    difficultyImpossible.addEventListener('click', () => {
+        this.totalTime = 5;
+    })
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
     }
 
     victory() {
         clearInterval(this.countdown);
+        let difficultyEasy = document.getElementById('easy3');
+    difficultyEasy.addEventListener('click', () => {
+        this.totalTime = 120;
+    })
+    let difficultyMedium = document.getElementById('medium3');
+    difficultyMedium.addEventListener('click', () => {
+        this.totalTime = 80;
+    })
+    let difficultyHard = document.getElementById('hard3');
+    difficultyHard.addEventListener('click', () => {
+        this.totalTime = 40;
+    })
+    let difficultyImpossible = document.getElementById('Impossible3');
+    difficultyImpossible.addEventListener('click', () => {
+        this.totalTime = 5;
+    })
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
@@ -155,7 +188,24 @@ class MatchingGame {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MatchingGame(100, cards);
+    let game = new MatchingGame(120, cards);
+
+    let difficultyEasy = document.getElementById('easy');
+    difficultyEasy.addEventListener('click', () => {
+        game = new MatchingGame(120, cards);
+    })
+    let difficultyMedium = document.getElementById('medium');
+    difficultyMedium.addEventListener('click', () => {
+        game = new MatchingGame(80, cards);
+    })
+    let difficultyHard = document.getElementById('hard');
+    difficultyHard.addEventListener('click', () => {
+        game = new MatchingGame(40, cards);
+    })
+    let difficultyImpossible = document.getElementById('Impossible');
+    difficultyImpossible.addEventListener('click', () => {
+        game = new MatchingGame(5, cards);
+    })
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
